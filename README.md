@@ -18,4 +18,6 @@ push "route 192.168.1.1 255.255.255.0"
 
 save and restart service.
 
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+
 Done!
